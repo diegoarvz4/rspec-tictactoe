@@ -1,4 +1,4 @@
-#RSpec Tic-Tac-Toe
+# RSpec Tic-Tac-Toe
 
 Tic Tac Toe rspec testing
 
