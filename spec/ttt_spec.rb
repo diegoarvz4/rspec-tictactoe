@@ -28,4 +28,15 @@ RSpec.describe TicTacToe  do
 
  end
 
+    #tests the check_length method
+    describe "#check_length?" do
+     
+      it "checks for valid player input=>true or false " do
+        tictactoe = TicTacToe.new
+        expect(tictactoe.check_length?("hello")).to eql(false)
+      end
+     
+    end
+   
+
 end

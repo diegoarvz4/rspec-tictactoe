@@ -1,5 +1,17 @@
 class TicTacToe
 
+     #checks the input length for player moves
+
+     def check_length?(input)
+        
+        if input.is_a?(Integer) && input >= 0 && input <= 8
+        return true
+        else
+            return false
+        end
+    end
+   
+    #checks for a win
     def winner?(board)
         #vertical and horizonal equality checks
         j = 0
@@ -25,5 +37,46 @@ class TicTacToe
       false
      end 
 
+    #checks for a tie
+        def tie?
+            if @moves.length == 9 
+                @winner_type = "TIE"
+                return true 
+            end 
+        end 
+
+    #checks if game is over
+
+    def game_over?
+
+        winner? || tie?
+
+    end 
+
+   #checks for winner
+
+   def decide_winner_or_tie
+
+    if @winner_type != "TIE"
+        @board.declare_player(@turn_type)
+    else  
+        @board.declare_tie
+    end 
+end 
+   
+
+
+
+
 
 end 
+
+
+module UI
+   def user_input
+        print "Your move: "
+        user_input = gets.chomp
+        user_input.to_i
+    end 
+
+end
