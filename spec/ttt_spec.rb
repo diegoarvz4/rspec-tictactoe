@@ -37,6 +37,22 @@ RSpec.describe TicTacToe  do
       end
      
     end
+
+    #tests game_over? method
+
+     describe "#tie?" do
+        
+       it "checks game over by tie" do
+            tictactoe = TicTacToe.new
+            board = ["X","O","O",
+                    "O","X","X",
+                    "O","X","O"]
+            moves_tie = [4,5,3,2,0,8,6,7,1]
+            moves_no_tie = [2,3,4,5,6]
+            expect(tictactoe.game_over?(board,moves_tie)).to eql(true)
+         end
+        
+       end
    
 
 end

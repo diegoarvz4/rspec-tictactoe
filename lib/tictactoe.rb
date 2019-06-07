@@ -38,8 +38,8 @@ class TicTacToe
      end 
 
     #checks for a tie
-        def tie?
-            if @moves.length == 9 
+        def tie?(moves)
+            if moves.length == 9 
                 @winner_type = "TIE"
                 return true 
             end 
@@ -47,9 +47,9 @@ class TicTacToe
 
     #checks if game is over
 
-    def game_over?
-
-        winner? || tie?
+    def game_over?(board,moves)
+ 
+        winner?(board) || tie?(moves)
 
     end 
 
@@ -71,12 +71,3 @@ end
 
 end 
 
-
-module UI
-   def user_input
-        print "Your move: "
-        user_input = gets.chomp
-        user_input.to_i
-    end 
-
-end
