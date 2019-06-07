@@ -1,7 +1,6 @@
 class TicTacToe
 
     def winner?(board)
-        board = @board.dimensions
         #vertical and horizonal equality checks
         j = 0
        for i in 0...3
