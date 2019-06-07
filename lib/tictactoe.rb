@@ -57,12 +57,12 @@ class TicTacToe
 
    def decide_winner_or_tie
 
-    if @winner_type != "TIE"
-        @board.declare_player(@turn_type)
-    else  
-        @board.declare_tie
+        if @winner_type != "TIE"
+            @board.declare_player(@turn_type)
+        else  
+            @board.declare_tie
+        end 
     end 
-end 
    
 
 
