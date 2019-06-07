@@ -1,12 +1,30 @@
 class TicTacToe
 
-    def winning_rows(board)
-        for i in 0..board.length-1
-            return true if board[i].uniq.size <= 1 && board[i][0] != " "
-        end
-        false
-    end 
+    def winner?(board)
+        board = @board.dimensions
+        #vertical and horizonal equality checks
+        j = 0
+       for i in 0...3
+        return true if (board[j]==board[j+1])&&(board[j+1]==board[j+2])
 
+        j += 3
+       end
+       #verticals equality test
+       j = 0
+       for i in 0...3
+
+        return true if (board[j]==board[j+3])&&(board[j+3]==board[j+6])
+        j += 1
+       end
+
+       #diagonals equality test
+     
+        return true if (board[0]==board[4])&&(board[4]==board[8])
+        return true if (board[2]==board[4])&&(board[4]==board[6])
+     
+
+      false
+     end 
 
 
 end 
