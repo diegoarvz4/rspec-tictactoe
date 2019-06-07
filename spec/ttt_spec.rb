@@ -12,6 +12,13 @@ RSpec.describe TicTacToe  do
 
   end
 
+  it "checks for winner by vertical equality" do
+
+    tictactoe = TicTacToe.new
+    expect(tictactoe.winner?(["X","O","O","X",4,5,"X",7,"O"])).to eql(true)
+
+  end
+
  end
 
 end
