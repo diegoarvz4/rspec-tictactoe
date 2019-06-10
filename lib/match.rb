@@ -33,34 +33,6 @@ class Match
 
     end 
 
-    # Method to evaluate a winner, a tie,
-    private
-
-    def game_state
-        @board.display
-    end 
-
-
-    def game_over?
-        board = @board.dimensions
-        winner?(board) || tie?(board)
-    end 
-     
-
-    def winner?(board)
-        return true if check_horizontal_winning(board)
-        return true if check_vertical_winning(board)
-        return true if cehck_diagonal_winning(board)
-        false
-    end 
-
-    def tie?(board)
-        if board.is_full? 
-            @winner_type = "TIE"
-            return true 
-        end 
-    end 
-
     def check_horizontal_winning(board)
         #vertical and horizonal equality checks
         j = 0
@@ -81,12 +53,49 @@ class Match
         false 
     end 
 
-    def cehck_diagonal_winning(board)
+    def check_diagonal_winning(board)
         #diagonals equality test
         return true if (board[0]==board[4])&&(board[4]==board[8])
         return true if (board[2]==board[4])&&(board[4]==board[6]) 
         false 
     end 
+
+    def test_game_over?
+        game_over?
+    end 
+
+    
+
+    # Method to evaluate a winner, a tie,
+    private
+
+    def game_state
+        @board.display
+    end 
+
+
+    def game_over?
+        board = @board.dimensions
+        winner?(board) || tie?(@board)
+    end
+     
+
+    def winner?(board)
+        return true if check_horizontal_winning(board)
+        return true if check_vertical_winning(board)
+        return true if check_diagonal_winning(board)
+        false
+    end 
+
+    def tie?(board)
+        if board.is_full? 
+            @winner_type = "TIE"
+            return true 
+        end 
+        false 
+    end 
+
+  
 
     def decide_winner_or_tie
 
