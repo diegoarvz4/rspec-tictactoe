@@ -1,21 +1,49 @@
-# RSpec Tic-Tac-Toe
+# Testing with RSpec
 
-Tic Tac Toe rspec testing
+> This a project that tests the tic toe project's methods.
 
-## Brief introduction
+## Built With
 
-The purpose of this project is to the functionality of our most important methods in the tic tac toe board game.
+- Ruby
+- Rspec
 
-## Skills we have demonstrated after completing the project
+## Getting Started
 
-RSpec
+To get a local copy up and running follow these simple example steps.
 
-Object Oriented Programming
+## Prerequisites
+  Ruby
+  Rspec
 
+## Setup
+  Clone or download this Repository.
 
-## Contributors
+## Run tests
+  `$ rspec`
 
-\[Albert Ngodi\](https://github.com/ngodi)
-\[Diego Arvizu\](https://github.com/diegoarvz4)  
+# Authors
 
+## 👤 **Albert Ngodi**
+
+- Github: [@ngodi](https://github.com/ngodi)
+
+## 👤 **Diego Luis Arvizu Gutiérrez**
+
+- Github: [@diegoarvz4](https://github.com/diegoarvz4)
+- Twitter: [@Diego Arvz](https://twitter.com/Darvizu_gutier)
+- Linkedin: [/in/diego-arvz](https://linkedin.com/linkedinhandle)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is Licensed under MIT
 
